@@ -1,3 +1,5 @@
+import random
+
 def main():
     print("Hello! Welcome to Rock Paper Scissors: CS45 edition!")
     print("This is a two player game, with rules as follows:")
@@ -7,6 +9,9 @@ def main():
     print("If both players make the same selection, then it's a tie.")
     print("Let's play! Make your selection: (rock, paper, or scissors)")
     userMove = input()
+    print("You selected " + userMove + ".")
+    computerMove = random.choice(['rock', 'paper', 'scissors'])
+    print("The computer selected " + computerMove + ".")
 
 
 if __name__ == "__main__":
