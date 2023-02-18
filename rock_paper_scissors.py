@@ -1,5 +1,7 @@
 import random
 
+DEFEATED_BY = {'rock' : 'scissors', 'scissors' : 'paper', 'paper' : 'rock'}
+
 def main():
     print("Hello! Welcome to Rock Paper Scissors: CS45 edition!")
     print("This is a two player game, with rules as follows:")
@@ -12,6 +14,12 @@ def main():
     print("You selected " + userMove + ".")
     computerMove = random.choice(['rock', 'paper', 'scissors'])
     print("The computer selected " + computerMove + ".")
+    if computerMove == DEFEATED_BY[userMove]:
+        print("You win!")
+    elif userMove == DEFEATED_BY[computerMove]:
+        print("The computer wins!")
+    else:
+        print("It's a tie!")
 
 
 if __name__ == "__main__":
